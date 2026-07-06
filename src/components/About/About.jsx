@@ -27,7 +27,6 @@ const About = () => {
               text={[
                 "Front End Developer",
                 "Wordpress Developer",
-                "UI/UX Designer",
                 "Coder",
               ]}
               speed={100}
