@@ -1,25 +1,26 @@
-# 🌐 Animated Portfolio Website
+# 🌐 Al Shahriar - Developer Portfolio
+
+A modern, responsive, and animated personal portfolio website built with React, Vite, and Tailwind CSS.
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio Live]([https://tarunkaushik.vercel.app/](https://al-shahriar.vercel.app/))
+🔗 [View Portfolio Live](https://al-shahriar.vercel.app/)
 
 ## 🛠️ Tech Stack
 
-- ⚛️ React.js
+- ⚛️ React.js 18
+- ⚡ Vite
 - 🎨 Tailwind CSS
-- 💾 Vercel(for deployment)
+- 🔌 WordPress & Custom Plugins
+- 📬 EmailJS
 
 ## 📁 Features
 
-- Responsive design for all screen sizes 📱💻
-- Smooth scroll and animation effects ✨
-- Clean and modular React components 🧩
-- Easy to customize with Tailwind utility classes 🎯
-- Professional sections: About, Skills, Projects, Contact, etc. 👨‍💻
+- 📱 Pixel-perfect responsive design across mobile, tablet, laptop, and desktop
+- ✨ Smooth scrolling and interactive tilt animations
+- 🧩 Modular and scalable React architecture
+- 👨‍💻 Highlighted sections: About, Skills, Projects, Experience, and Contact
 
+## 👨‍💻 Developer
 
-## 🌟 Credits
-
-This project was created with ❤️ by [Tarun Kaushik](https://tarunkaushik.vercel.app/).
-If you like it, feel free to ⭐ this repository and share!
+Built and maintained by **Al Shahriar** ([GitHub](https://github.com/shahriar1100) | [LinkedIn](https://www.linkedin.com/in/alshahriarr/)).

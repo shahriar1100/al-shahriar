@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0a24"/>
+      <stop offset="50%" stop-color="#19113d"/>
+      <stop offset="100%" stop-color="#2d165f"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8245ec"/>
+      <stop offset="100%" stop-color="#00d2ff"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Glowing blobs -->
+  <circle cx="680" cy="120" r="140" fill="#8245ec" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="120" cy="340" r="120" fill="#00d2ff" opacity="0.2" filter="url(#glow)"/>
+
+  <!-- Subtle grid overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Central Card Icon Illustration -->
+  <g transform="translate(100, 110)">
+    <!-- Calendar / Booking UI Graphic -->
+    <rect x="0" y="0" width="220" height="230" rx="20" fill="#151034" stroke="#8245ec" stroke-width="2" opacity="0.9"/>
+    
+    <!-- Header of calendar -->
+    <rect x="0" y="0" width="220" height="60" rx="20" fill="url(#accentGrad)"/>
+    <rect x="0" y="40" width="220" height="20" fill="url(#accentGrad)"/>
+    <text x="110" y="38" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">BOOKING SYSTEM</text>
+    
+    <!-- Mini calendar grid -->
+    <g fill="#4e4875" opacity="0.6">
+      <circle cx="45" cy="95" r="10"/>
+      <circle cx="85" cy="95" r="10"/>
+      <circle cx="130" cy="95" r="10"/>
+      <circle cx="175" cy="95" r="10"/>
+      <circle cx="45" cy="135" r="10"/>
+      <circle cx="85" cy="135" r="10" fill="#00d2ff" opacity="1"/>
+      <circle cx="130" cy="135" r="10" fill="#8245ec" opacity="1"/>
+      <circle cx="175" cy="135" r="10"/>
+      <circle cx="45" cy="175" r="10"/>
+      <circle cx="85" cy="175" r="10"/>
+      <circle cx="130" cy="175" r="10"/>
+      <circle cx="175" cy="175" r="10"/>
+    </g>
+
+    <!-- Clock floating badge -->
+    <g transform="translate(160, 170)">
+      <circle cx="25" cy="25" r="30" fill="#0b0821" stroke="#00d2ff" stroke-width="2"/>
+      <circle cx="25" cy="25" r="3" fill="#00d2ff"/>
+      <line x1="25" y1="25" x2="25" y2="12" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+      <line x1="25" y1="25" x2="35" y2="25" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Text Details on Right -->
+  <g transform="translate(370, 140)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="170" height="32" rx="16" fill="#8245ec" fill-opacity="0.25" stroke="#8245ec" stroke-width="1.5"/>
+    <text x="85" y="21" fill="#c084fc" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">WORDPRESS PLUGIN</text>
+
+    <!-- Project Title -->
+    <text x="0" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="34" font-weight="bold">YouGo Booking</text>
+    <text x="0" y="115" fill="#a855f7" font-family="Segoe UI, sans-serif" font-size="20" font-weight="600">Custom Booking Plugin</text>
+
+    <!-- Subtitle / bullets -->
+    <text x="0" y="155" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="15">✓ Interactive Reservation &amp; Schedule Management</text>
+    <text x="0" y="185" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="15">✓ Custom Post Types &amp; WordPress Hook Architecture</text>
+    <text x="0" y="215" fill="#9ca3af" font-family="Segoe UI, sans-serif" font-size="15">✓ Elementor &amp; Shortcode Integration</text>
+  </g>
+</svg>
+

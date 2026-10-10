@@ -1,64 +1,65 @@
-// src/components/Skills/Skills.jsx
-import React from "react";
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
 
 const Skills = () => (
   <section
     id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+    className="w-full py-16 sm:py-24 font-sans bg-skills-gradient clip-path-custom relative"
   >
-    {/* Section Title */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
-      A collection of my technical skills and expertise honed through various projects and experiences
-      </p>
-    </div>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section Title */}
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          SKILLS
+        </h2>
+        <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-3 rounded-full"></div>
+        <p className="text-gray-300 mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+          A showcase of my technical toolkit, CMS proficiencies, and custom development expertise
+        </p>
+      </div>
 
-    {/* Skill Categories */}
-    <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-      {SkillsInfo.map((category) => (
-        <div
-          key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
-        >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-            {category.title}
-          </h3>
-
-          {/* Skill Items - 3 per row on larger screens */}
+      {/* Skill Categories Grid - 1 col on mobile, 2 on tablet, 3 on desktop */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        {SkillsInfo.map((category) => (
           <Tilt
             key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
+            tiltMaxAngleX={8}
+            tiltMaxAngleY={8}
             perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+            scale={1.02}
+            transitionSpeed={800}
+            gyroscope={false}
+            className="h-full"
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
-                  />
-                  <span className="text-xs sm:text-sm text-gray-300">
-                    {skill.name}
-                  </span>
+            <div className="h-full bg-gray-900/90 backdrop-blur-md p-5 sm:p-7 rounded-2xl border border-white/10 shadow-[0_0_25px_rgba(130,69,236,0.25)] flex flex-col justify-between hover:border-purple-500/50 transition-colors duration-300">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200 mb-6 text-center tracking-wide">
+                  {category.title}
+                </h3>
+
+                {/* Skill Badges */}
+                <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+                  {category.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center justify-center space-x-2 bg-purple-950/20 border border-gray-700/70 hover:border-purple-400/60 rounded-xl py-2 px-2.5 transition-all duration-200 hover:scale-105 hover:bg-purple-900/30"
+                    >
+                      <img
+                        src={skill.logo}
+                        alt={`${skill.name} logo`}
+                        className="w-5 h-5 sm:w-6 sm:h-6 object-contain shrink-0"
+                      />
+                      <span className="text-xs sm:text-sm font-medium text-gray-200 truncate">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </Tilt>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </section>
 );

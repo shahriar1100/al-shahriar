@@ -1,4 +1,3 @@
-import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile2.png";
@@ -7,76 +6,85 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-24 font-sans"
     >
-      <div className="flex flex-col-reverse items-center justify-between md:flex-row">
-        {/* Left Side */}
-        <div className="mt-8 text-center md:w-1/2 md:text-left md:mt-0">
+      <div className="flex flex-col-reverse items-center justify-between gap-10 md:gap-8 lg:gap-16 md:flex-row">
+        {/* Left Side: Content */}
+        <div className="w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start">
           {/* Greeting */}
-          <h1 className="mb-2 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-purple-400 mb-2 tracking-wide">
             Hi, I am
           </h1>
+
           {/* Name */}
-          <h2 className="mb-4 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4">
             Al Shahriar
           </h2>
+
           {/* Skills Heading with Typing Effect */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+          <h3 className="text-lg sm:text-2xl md:text-3xl font-semibold text-[#8245ec] mb-6 flex flex-wrap justify-center md:justify-start items-center gap-1">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
                 "Front End Developer",
-                "Wordpress Developer",
-                "Coder",
+                "WordPress Developer",
+                "Elementor Expert",
+                "Plugin Developer",
               ]}
-              speed={100}
+              speed={80}
               eraseSpeed={50}
-              typingDelay={500}
+              typingDelay={400}
               eraseDelay={2000}
               cursorRenderer={(cursor) => (
-                <span className="text-[#8245ec]">{cursor}</span>
+                <span className="text-[#8245ec] font-bold">{cursor}</span>
               )}
             />
           </h3>
+
           {/* About Me Paragraph */}
-          <p className="mt-8 mb-10 text-base leading-relaxed text-gray-400 sm:text-lg md:text-lg">
-            I am a Front End and WordPress Developer with over 2 years of
-            experience in building responsive, user-friendly, and professional
-            websites. As a Front End Developer, I work with HTML, CSS,
-            JavaScript, and React to create modern interfaces with smooth user
-            experiences. As a WordPress Developer, I specialize in building,
-            customizing, and optimizing WordPress websites that are secure,
-            scalable, and easy to manage.
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 max-w-2xl mb-8">
+            I am a passionate Front End and WordPress Developer with over 2 years of
+            experience in crafting fast, responsive, and pixel-perfect web interfaces.
+            I specialize in React, modern JavaScript, Tailwind CSS, and custom WordPress
+            plugin development—including booking systems, credential verification engines, and
+            custom Elementor designs.
           </p>
-          {/* Resume Button */}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 mt-5 text-lg font-bold text-white transition duration-300 transform rounded-full hover:scale-105"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 w-full sm:w-auto">
+            <a
+              href="#contact"
+              className="px-7 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-white rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_25px_rgba(130,69,236,0.5)]"
+              style={{
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+              }}
+            >
+              GET IN TOUCH
+            </a>
+            <a
+              href="#work"
+              className="px-7 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold text-gray-200 border-2 border-purple-500/50 rounded-full transition-all duration-300 hover:bg-purple-600/20 hover:border-purple-400 hover:text-white"
+            >
+              VIEW PROJECTS
+            </a>
+          </div>
         </div>
-        {/* Right Side */}
-        <div className="flex justify-center md:w-1/2 md:justify-end">
+
+        {/* Right Side: Profile Photo */}
+        <div className="w-full md:w-2/5 flex justify-center items-center">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
+            className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full border-4 border-purple-600/80 shadow-[0_0_35px_rgba(130,69,236,0.4)] overflow-hidden shrink-0"
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
             perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
+            scale={1.03}
+            transitionSpeed={800}
             gyroscope={true}
           >
             <img
               src={profileImage}
               alt="Al Shahriar"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              className="w-full h-full object-cover rounded-full"
             />
           </Tilt>
         </div>
